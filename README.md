@@ -29,6 +29,10 @@ sudo yum -y install gzip gunzip
 ```
 brew install gzip
 ```
+Se preferir fazer o download do codigo fonte e compilá-lo, basta rodar o script de instalação da seguinte maneira:
+```
+./install_script.sh
+```
 
 ## Como executar
 Para podermos realizar o benchmark desse programa vamos comprimir imagens de alta resolução. Para isso, acesse [esse link](http://imagecompression.info/test_images/rgb16bit_linear.zip) e baixe as imagens de demonstração. Após baixá-las, descompacte e vá até o diretório que as imagens foram extraídas. Após isso, rode o seguinte comando:
