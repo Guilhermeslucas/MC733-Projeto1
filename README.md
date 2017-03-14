@@ -20,7 +20,7 @@ Caso algo seja retornado, isso significa que este já está instalado e você po
 sudo apt-get install gzip gunzip
 ```
 
-**Sistemas baseados em RedHat(Fedora, CentOS) ou que usam Yum:**
+**Sistemas baseados em RedHat (Fedora, CentOS) ou que usam Yum:**
 ```
 sudo yum -y install gzip gunzip
 ```
