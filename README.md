@@ -15,12 +15,12 @@ gzip --version
 ```
 Caso algo seja retornado, isso significa que este já está instalado e você pode pular essa parte. Caso contrário, siga os comandos abaixo, seguindo a distribuição que esta usando:
 
-**Sistemas baseados em Debian(Ubuntu, Mint) ou que usam Apt-get:**
+**Sistemas baseados em Debian (Ubuntu, Mint) ou que usam Apt-get:**
 ```
 sudo apt-get install gzip gunzip
 ```
 
-**Sistemas baseados em RedHat(Fedora, CentOS) ou que usam yum**
+**Sistemas baseados em RedHat(Fedora, CentOS) ou que usam Yum:**
 ```
 sudo yum -y install gzip gunzip
 ```
