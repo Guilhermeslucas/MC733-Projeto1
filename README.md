@@ -2,7 +2,9 @@
 ## O que faz? Para que serve?
 Serve para (des)comprimir arquivos em geral, conservando as permissões dos arquivos. Considerado o melhor algoritmo para compressão em geral e utilizado como padrão na internet.
 ## Por que é bom para medir desempenho?
-É um programa que, dependendo da entrada, precisa utilizar de forma extremamente eficaz o processador, disco e memória.
+É um programa que, dependendo da entrada, precisa utilizar de forma extremamente eficaz o processador, disco e memória. Além disso, existem opções que tornam possível
+fazer uma melhor compressão, o que faz o computador demorar mais tempo para processar todos os dados, levando mais tempo o que torna a análise dos dados melhor e mais
+realista.
 ## Onde baixar
  http://ftp.gnu.org/gnu/gzip/ (via HTTP)
 
