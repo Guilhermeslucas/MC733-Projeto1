@@ -15,23 +15,9 @@ A maioria das distribuições GNU/Linux já vem com o gzip instalado por padrão
 ```
 gzip --version
 ```
-Caso algo seja retornado, isso significa que este já está instalado e você pode pular essa parte. Caso contrário, siga os comandos abaixo, seguindo a distribuição que esta usando:
+Caso algo seja retornado, isso significa que este já está instalado e você pode pular essa parte. Caso contrário, use o comando abaixo para 
+instalá-lo:
 
-**Sistemas baseados em Debian (Ubuntu, Mint) ou que usam Apt-get:**
-```
-sudo apt-get install gzip gunzip
-```
-
-**Sistemas baseados em RedHat (Fedora, CentOS) ou que usam Yum:**
-```
-sudo yum -y install gzip gunzip
-```
-
-**OSX (Mac)**
-```
-brew install gzip
-```
-Se preferir fazer o download do codigo fonte e compilá-lo, basta rodar o script de instalação da seguinte maneira:
 ```
 ./install_script.sh
 ```
@@ -50,6 +36,7 @@ Além disso, estamos usando essa imagem por ser a maior do dataset, o que també
 
 ## Como medir o desempenho
 Como que o desempenho é medido através deste programa? Se for através de tempo, você deve especificar claramente qual tempo deverá ser utilizado e indicar o motivo aqui. Quantas vezes a medida deverá ser feita? O que fazer com ela (média, etc) ? Não especificar o tempo será considerado falha grave.
+
 ## Como apresentar o desempenho
 Como o desempenho deverá ser mostrado. Margem de erro, etc.
 ## Medições base (uma máquina)
