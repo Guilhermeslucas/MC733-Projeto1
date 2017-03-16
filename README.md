@@ -15,23 +15,9 @@ A maioria das distribuições GNU/Linux já vem com o gzip instalado por padrão
 ```
 gzip --version
 ```
-Caso algo seja retornado, isso significa que este já está instalado e você pode pular essa parte. Caso contrário, siga os comandos abaixo, seguindo a distribuição que esta usando:
+Caso algo seja retornado, isso significa que este já está instalado e você pode pular essa parte. Caso contrário, use o comando abaixo para
+instalá-lo:
 
-**Sistemas baseados em Debian (Ubuntu, Mint) ou que usam Apt-get:**
-```
-sudo apt-get install gzip gunzip
-```
-
-**Sistemas baseados em RedHat (Fedora, CentOS) ou que usam Yum:**
-```
-sudo yum -y install gzip gunzip
-```
-
-**OSX (Mac)**
-```
-brew install gzip
-```
-Se preferir fazer o download do codigo fonte e compilá-lo, basta rodar o script de instalação da seguinte maneira:
 ```
 ./install_script.sh
 ```
