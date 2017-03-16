@@ -49,8 +49,21 @@ Além disso, estamos usando essa imagem por ser a maior do dataset, o que també
 
 
 ## Como medir o desempenho
-Como que o desempenho é medido através deste programa? Se for através de tempo, você deve especificar claramente qual tempo deverá ser utilizado e indicar o motivo aqui. Quantas vezes a medida deverá ser feita? O que fazer com ela (média, etc) ? Não especificar o tempo será considerado falha grave.
+Para medir o desempenho, iremos utilizar o comando `perf`. Com ele iremos medir o tempo total de execução do `gzip`, o uso de cpu e o uso de memória. O comando `perf` tem a opção `-r n` que nos permite rodar o comando `n` vezes e ao fim ele nos retorna a média de cada parâmetro e seus respectivos desvios padrão.
+
 ## Como apresentar o desempenho
 Como o desempenho deverá ser mostrado. Margem de erro, etc.
 ## Medições base (uma máquina)
-Inclua a especificação dos componentes relevantes e os resultados de desempenho.
+OS: Ubuntu 14.04 LTS 64 bits
+Processador: Intel Core i7-4500U CPU @ 1.80 GHz x 4
+Memória: 8 GB DDR3
+
+|      Parâmetro    | Valor médio  |
+| :-----------------| :------------|
+| Tempo de CPU (ms) | 11018,401621 |
+| Uso de CPU (%)    | 100         |
+| Memória (kB)      | Item Two     |
+
+`sudo perf stat -r 10 gzip -f -k -9 ~/big_building.ppm`
+
+A flag `-f` foi utilizada para evitar que o `gzip` perguntasse toda hora se queríamos sobrescrever o arquivo de saída.
