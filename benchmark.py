@@ -8,7 +8,7 @@ total_time = 0.0
 total_memory = 0
 
 for i in range(0, 10):
-    os.system('/usr/bin/time -o output -v gzip -f -k -9 ~/big_building.ppm')
+    os.system('/usr/bin/time -o output -v gzip -f -k -9 big_building.ppm')
 
     with open('output') as f:
         content = f.readlines()
