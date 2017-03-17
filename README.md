@@ -35,21 +35,29 @@ Além disso, estamos usando essa imagem por ser a maior do dataset, o que també
 
 
 ## Como medir o desempenho
-Para medir o desempenho, iremos utilizar o comando `perf`. Com ele iremos medir o tempo total de execução do `gzip`, o uso de cpu e o uso de memória. O comando `perf` tem a opção `-r n` que nos permite rodar o comando `n` vezes e ao fim ele nos retorna a média de cada parâmetro e seus respectivos desvios padrão.
+Para medir o desempenho, iremos utilizar o comando `/usr/bin/times -v`. Com ele iremos medir o tempo total de execução do `gzip`, o uso de CPU e o uso de memória. Selecionamos o tempo total de execução, pois o programa tem seu tempo de execução dividido entre espaço de usuário e sistema.
+
+Criamos um script para executar o arquivo acima `n` vezes, calcular a média dos parâmetros e o desvio padrão.
 
 ## Como apresentar o desempenho
-Como o desempenho deverá ser mostrado. Margem de erro, etc.
+O resultado de cada um dos 3 parâmetros medidos pelo benchmark será a média de **n** análises feitas por `/usr/bin/times -v`, seguido de seu respectivos desvios padrão.
+Além disso, é apresentado uma nota final **N**, calculada a partir da fórmula:
+
+$ N = \dfrac{5*CPU\_TIME + 3*CPU\_USAGE + 2*MEMORY\_USAGE}{10} $
+
+Quanto menor o N, melhor o desempenho do gzip no computador.
+
 ## Medições base (uma máquina)
 OS: Ubuntu 14.04 LTS 64 bits
 Processador: Intel Core i7-4500U CPU @ 1.80 GHz x 4
 Memória: 8 GB DDR3
 
-|      Parâmetro    | Valor médio  |
-| :-----------------| :------------|
-| Tempo de CPU (ms) | 11018,401621 |
-| Uso de CPU (%)    | 100         |
-| Memória (kB)      | Item Two     |
+O seguinte comando foi executado 16 vezes: `/usr/bin/time -v gzip -f -k -9 ~/big_building.ppm`
 
-`sudo perf stat -r 10 gzip -f -k -9 ~/big_building.ppm`
+A média dos resultados é apresentada abaixo:
 
-A flag `-f` foi utilizada para evitar que o `gzip` perguntasse toda hora se queríamos sobrescrever o arquivo de saída.
+|     Parâmetro    | Valor médio | Desvio padrão |
+|:-----------------|:------------|:--------------|
+| Tempo de CPU (s) |    10,78    |      0,01     |
+| Uso de CPU (%)   |    99,75    |      0,56     |               
+| Memória (kB)     |     815     |       3       |
