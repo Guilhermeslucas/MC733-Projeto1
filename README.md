@@ -25,7 +25,7 @@ instalá-lo:
 ## Como executar
 Para podermos realizar o benchmark desse programa vamos comprimir imagens de alta resolução. Para isso, acesse [esse link](http://imagecompression.info/test_images/rgb16bit_linear.zip) e baixe as imagens de demonstração. Após baixá-las, descompacte e vá até o diretório que as imagens foram extraídas. Após isso, rode o seguinte comando:
 ```
-gzip -k -9 big_building.ppm
+python benchmark.py
 ```
 **-k:** Opção usada para manter a imagem original na pasta, além da comprimida.
 
