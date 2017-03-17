@@ -19,7 +19,7 @@ Caso algo seja retornado, isso significa que este já está instalado e você po
 instalá-lo e já executá-lo (não use se você já possuir o Gzip instalado):
 
 ```
-./execute.sh
+sudo ./execute.sh
 ```
 
 ## Como executar
