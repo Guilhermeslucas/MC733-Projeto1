@@ -16,7 +16,7 @@ A maioria das distribuições GNU/Linux já vem com o gzip instalado por padrão
 gzip --version
 ```
 Caso algo seja retornado, isso significa que este já está instalado e você pode pular essa parte. Caso contrário, use o comando abaixo para
-instalá-lo e já executá-lo(não use se você já possuir o Gzip instalado0:
+instalá-lo e já executá-lo (não use se você já possuir o Gzip instalado):
 
 ```
 ./execute.sh
